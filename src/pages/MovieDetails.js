@@ -44,21 +44,13 @@ class MovieDetails extends Component {
         <Link to={ `/movies/${id}/edit` }>EDITAR</Link>
 
         <Link to="/">VOLTAR</Link>
-        <Link to="/" onClick={ () => movieAPI.deleteMovie({ id }) }>DELETAR</Link>
+        <Link to="/" onClick={ () => movieAPI.deleteMovie(id) }>DELETAR</Link>
       </div>
     );
   }
 }
 
 MovieDetails.propTypes = {
-  movie: propTypes.shape({
-    title: propTypes.string,
-    subtitle: propTypes.string,
-    storyline: propTypes.string,
-    imagePath: propTypes.string,
-    rating: propTypes.number,
-    genre: propTypes.string,
-  }).isRequired,
   match: propTypes.shape({
     params: propTypes.shape({
       id: propTypes.string,
