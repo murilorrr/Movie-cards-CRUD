@@ -1,0 +1,13 @@
+.movie-list {
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: 40px;
+}
+
+.link {
+  align-self: center;
+  width: 300px;
+}
+.link::after {
+  content: ' AQUI!';
+}

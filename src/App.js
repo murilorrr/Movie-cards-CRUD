@@ -1,11 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { EditMovie, MovieDetails, NewMovie, MovieList, NotFound } from './pages/index';
+import './App.css';
 
 class App extends React.Component {
   render() {
     return (
-      <div>
+      <div className="body">
         <BrowserRouter>
           <Switch>
             <Route exact path="/movies/new" component={ NewMovie } />

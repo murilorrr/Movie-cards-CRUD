@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import propTypes from 'prop-types';
+import './MovieDetails.css';
 
 import { Link } from 'react-router-dom';
 import * as movieAPI from '../services/movieAPI';
@@ -26,7 +27,6 @@ class MovieDetails extends Component {
   }
 
   render() {
-    // Change the condition to check the state
     const { loading } = this.state;
     if (loading) return <Loading />;
 
@@ -34,17 +34,24 @@ class MovieDetails extends Component {
       { title, storyline, imagePath, genre, rating, subtitle } } = this.state;
     const { match: { params: { id } } } = this.props;
     return (
-      <div data-testid="movie-details">
-        <img alt="Movie Cover" src={ `../${imagePath}` } />
-        <p>{ `title: ${title}` }</p>
-        <p>{ `Subtitle: ${subtitle}` }</p>
-        <p>{ `Storyline: ${storyline}` }</p>
-        <p>{ `Genre: ${genre}` }</p>
-        <p>{ `Rating: ${rating}` }</p>
-        <Link to={ `/movies/${id}/edit` }>EDITAR</Link>
-
-        <Link to="/">VOLTAR</Link>
-        <Link to="/" onClick={ () => movieAPI.deleteMovie(id) }>DELETAR</Link>
+      <div className="movie-card-details" data-testid="movie-details">
+        <img className="movie-card-image" alt="Movie Cover" src={ `../${imagePath}` } />
+        <h3 className="movie-card-title">{title}</h3>
+        <p className="movie-card-genre">{genre}</p>
+        <h4 className="movie-card-subtitle">{subtitle}</h4>
+        <h5 className="movie-card-storyline">{storyline}</h5>
+        <p className="movie-card-rating">{rating}</p>
+        <div className="movie-card-options">
+          <Link className="btn btn-success" to="/">VOLTAR</Link>
+          <Link className="btn btn-primary" to={ `/movies/${id}/edit` }>EDITAR</Link>
+          <Link
+            className="btn btn-danger"
+            to="/"
+            onClick={ () => movieAPI.deleteMovie(id) }
+          >
+            DELETAR
+          </Link>
+        </div>
       </div>
     );
   }
