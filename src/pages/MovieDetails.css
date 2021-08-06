@@ -4,15 +4,14 @@
   border-radius: 3px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 10px;
-  height: 450px;
-  margin: auto;
   height: 100%;
+  justify-content: space-between;
+  margin: auto;
   overflow: hidden;
-  width: 400px;
+  padding: 10px;
   position: relative;
   top: 80px;
+  width: 400px;
 }
 
 .movie-card-image {
@@ -41,13 +40,13 @@ h3 .movie-card-title {
 }
 
 .movie-card-genre {
+  align-self: flex-start;
+  background-color: #181818;
+  border-radius: 8px;
   color: #da0902;
   font-size: 16px;
   font-weight: 500;
   margin: 0 0 8px;
-  background-color: #181818;
-  align-self: flex-start;
-  border-radius: 8px;
   padding: 10px;
 }
 
@@ -55,11 +54,11 @@ h3 .movie-card-title {
   align-self: flex-end;
   background-color: #094586;
   border-radius: 25px;
+  box-shadow: 5px 5px 8px 1px black;
   color: white;
   font-size: 16px;
   font-weight: 700;
   padding: 3px 9px;
-  box-shadow: 5px 5px 8px 1px #000000;
 }
 
 .movie-card-options {
@@ -67,9 +66,9 @@ h3 .movie-card-title {
 }
 
 a {
-  margin: 2%;
-  width: 30%;
-  text-decoration: none;
+  box-shadow: 5px 5px 8px 1px black;
   color: #2e2f30;
-  box-shadow: 5px 5px 8px 1px #000000;
+  margin: 2%;
+  text-decoration: none;
+  width: 30%;
 }

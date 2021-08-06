@@ -6,8 +6,9 @@
 
 .link {
   align-self: center;
-  width: 300px;
+  width: 44%;
 }
-.link::after {
+
+.link:after {
   content: ' AQUI!';
 }
