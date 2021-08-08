@@ -8,6 +8,10 @@ form {
   padding: 30px;
 }
 
+h1 {
+  text-align: center;
+}
+
 .chose-options {
   align-items: center;
   display: flex;

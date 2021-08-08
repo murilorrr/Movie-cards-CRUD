@@ -158,6 +158,7 @@ class MovieForm extends React.Component {
     return (
       <div>
         <form className="form-group mb-2">
+          <h1>Forms</h1>
           {this.renderTitleInput()}
           {this.renderSubtitleInput()}
           {this.renderImagePathInput()}
